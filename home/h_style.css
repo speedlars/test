@@ -10,15 +10,19 @@ body{
 }
 .title{
     position:sticky;
+    display: flexbox;
     top:0;
     margin-top: 0;
     height: 100px;
     background-color: #101820;
 }
 .title > h1{
-    margin-top: 0px;
+    white-space: nowrap;
+    width: 1263px;
+    height: auto;
+    margin-top: 0;
     text-align: center;
-    font-size: 80px;
+    font-size: 500%;
     background: linear-gradient(to right, #f2c763, #8a2b2b);
     background: -webkit-linear-gradient(to right, #f2c763, #8a2b2b);
     background-clip: text;
@@ -26,7 +30,8 @@ body{
     color: transparent; 
 }
 .counting{
-    margin-top: 10px;
+    margin-top: 1%;
+    margin-bottom: 1%;
     color: white;
     display: flex;
     flex-wrap: flex;
@@ -37,6 +42,10 @@ body{
 
 .text{
     display: inline;
+    flex-wrap: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     font-weight: bold;
     font-size: 3rem;
     line-height: 1;
@@ -47,10 +56,40 @@ body{
 }
 
 .youtube{
+    white-space: nowrap;
     margin: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 0;
     min-height: auto;
+    padding-left: 5%;
+
+}
+
+.link{
+    white-space: nowrap;
+    margin: 0;
+    display: flex;
+    flex-direction: row  row-reverse  column  column-reverse;
+    padding: 0;
+    min-height: auto;
+}
+
+.social{
+    
+    float: left;
+    margin-left: 0;
+    white-space: nowrap;
+    background-color: rgba(138, 43, 43, .75);
+    width: 60px;
+    height: 230px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.social li{
+    padding-top: 5px;
+    text-align: center;
+    list-style: none;
 }
