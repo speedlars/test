@@ -9,25 +9,31 @@ body{
     background-attachment: fixed;
 }
 .title{
+    white-space: nowrap;
     position:sticky;
     display: flexbox;
     top:0;
     margin-top: 0;
+    width: 3000px auto;
     height: 100px;
     background-color: #101820;
+    flex-direction: row  row-reverse  column  column-reverse;
 }
 .title > h1{
     white-space: nowrap;
-    width: 1263px;
+    width: auto;
     height: auto;
     margin-top: 0;
     text-align: center;
+    align-items: center;
+    justify-content: center;
     font-size: 500%;
+    background-position: center;
     background: linear-gradient(to right, #f2c763, #8a2b2b);
     background: -webkit-linear-gradient(to right, #f2c763, #8a2b2b);
     background-clip: text;
     -webkit-background-clip: text;
-    color: transparent; 
+    color: transparent;
 }
 .counting{
     margin-top: 1%;
@@ -63,8 +69,7 @@ body{
     align-items: center;
     padding: 0;
     min-height: auto;
-    padding-left: 5%;
-
+    padding-left: 450px;
 }
 
 .link{
@@ -77,19 +82,123 @@ body{
 }
 
 .social{
-    
     float: left;
-    margin-left: 0;
+    margin-left: 350px;
     white-space: nowrap;
-    background-color: rgba(138, 43, 43, .75);
+    background-color: rgba(242, 199, 99, .55);
     width: 60px;
-    height: 230px;
+    height: auto;
     padding-top: 10px;
     padding-bottom: 10px;
 }
 
 .social li{
-    padding-top: 5px;
+    padding-top: 75px;
+    padding-left: 3px;
     text-align: center;
+    justify-content: center;
+    align-items: center;
     list-style: none;
+}
+
+/*
+選單線
+*/
+.line {
+    margin-top: 20px;
+    width: 45px;
+    height: 45px;
+    background: #101820;
+    cursor: pointer;
+    display: block;
+    padding: 16px;
+    position: fixed;
+    z-index: 2;
+}
+.line .menu,
+.line .menu::before,
+.line .menu::after {
+    background: #8a2b2b;
+    content: '';
+    display: block;
+    height: 5px;
+    position: absolute;
+    transition: background ease .3s, top ease .3s .3s, transform ease .3s;
+    width: 50px;
+}
+.line .menu {
+    left: 18px;
+    top: 27px;
+}
+
+.line .menu::before {
+    top: -20px;
+}
+
+.line .menu::after {
+    top: 20px;
+}
+/*
+點選選單變叉叉
+*/
+#menu:checked + .line .menu {
+    background: transparent;
+}
+
+#menu:checked + .line .menu::before {
+    transform: rotate(45deg);
+}
+
+#menu:checked + .line .menu::after {
+    transform: rotate(-45deg);
+}
+
+#menu:checked + .line .menu::before,
+#menu:checked + .line .menu::after {
+    top: 0;
+    transition: top ease .3s, transform ease .3s .3s;
+}
+
+/*
+選單開合
+*/
+#menu:checked ~ .menu-list {
+    width: 200px;
+}
+
+.menu-list {
+    width: 0;
+    height: 100vh;
+    background: rgba(77, 31, 31, .75);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
+    margin-top: 100px;
+    padding-top: 100px;
+    position: fixed;
+    z-index: 1;
+    transition: all .6s;
+    overflow: hidden;
+}
+/*
+選單向外推
+*/
+.menu-list ul {
+    list-style: none;
+    margin-left:70px;
+    padding: 0;
+}
+.menu-list ul>li{
+    font-size: 20px;
+    padding-bottom: 50px;
+    color: white;
+    display:block;
+    width:100px;
+}
+/*
+隱藏核許框
+*/
+input#menu {
+ display: none;
+}
+a{
+    color: white;
 }
