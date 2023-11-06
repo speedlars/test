@@ -1,8 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
 body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
     padding: 0;
     margin: 0;
     background-color: #101820;
@@ -11,7 +8,7 @@ body{
 
 .loader{
     width: 300px;
-    margin: 50% auto 70px;
+    margin: 20% auto 70px;
     position: relative;
 }
 
