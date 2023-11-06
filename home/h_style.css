@@ -21,7 +21,7 @@ body{
 }
 .title > h1{
     white-space: nowrap;
-    width: auto;
+    width: 1920px;
     height: auto;
     margin-top: 0;
     text-align: center;
@@ -38,6 +38,7 @@ body{
 .counting{
     margin-top: 1%;
     margin-bottom: 1%;
+    width: 1920px;
     color: white;
     display: flex;
     flex-wrap: flex;
